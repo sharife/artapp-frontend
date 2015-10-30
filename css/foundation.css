@@ -6469,13 +6469,13 @@ th.hide-for-touch {
     list-style:none;
 }
 
-.soc2 li {
+.soc2 p {
     display:inline-block;
     *display:inline;
     zoom:1;
 }
 
-  .soc2 li a {
+  .soc2 span a {
     font-family:si!important;
     font-style:normal;
     font-weight:400;
@@ -6511,6 +6511,7 @@ th.hide-for-touch {
     -moz-border-radius: 6px;
     border-radius: 6px;
     margin-right: 6px;
+    margin-bottom: 0px;
     color: #bbb;
     background-color: transparent;
 }
