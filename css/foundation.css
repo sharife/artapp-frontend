@@ -3755,15 +3755,22 @@ h3 {
   font-weight: 300; }
 
 h4 {
-  font-size: 1.125rem; }
+  font-size: 1.1rem; }
 
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.4rem;
   font-style: italic;
-  font-weight: 300; }
+  font-weight: 300;
+  text-align:center;
+  padding:2rem;
+  }
 
 h6 {
-  font-size: 1.1rem; }
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 300;
+  text-align:center;
+  }
 
 .subheader {
   line-height: 1.4;
@@ -3925,16 +3932,7 @@ blockquote p {
 
   h3 {
     font-size: 1.6875rem; }
-
-  h4 {
-    font-size: 1.4375rem; }
-
-  h5 {
-    font-size: 1.125rem; }
-
-  h6 {
-    font-size: 1rem;
-    font-weight: bold; } }
+  }
 .split.button {
   position: relative;
   padding-right: 5.0625rem; }
