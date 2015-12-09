@@ -6533,8 +6533,19 @@ th.hide-for-touch {
 
 
 
+
+
 /* slideout */
 
+#bignav {
+  text-align:right;
+  margin-top:-50px;
+}
+
+#smallnav {
+  text-align:right;
+  margin-top:-35px;
+}
 
 .toggle-button {
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -6542,6 +6553,7 @@ th.hide-for-touch {
   color: #000;
   background-color: #fff;
   font-size: 1.2rem;
+  border: 0;
 }
 
 
