@@ -5,6 +5,11 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="cleartype" content="on" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
     <title>+ArtApp | Petition Apple to add Art to the App Store</title>
     <link rel="stylesheet" href="css/foundation.css" />
 
@@ -14,38 +19,58 @@
 
 
     <script src="js/vendor/modernizr.js"></script>
+    <style>
+      .slideout-menu { left: auto; }
+      .btn-hamburger { left: auto; right: 12px;}
+      .box { height: 1500px; }
+    </style>
    
   </head>
   <body>
 
+<nav id="menu">
+  <section class="menu-section">
+    <ul class="menu-section-list">
+      <li><a href="index.html">HOME</a></li>
+      <li><span>THE PETITION</span></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="statements.html">STATEMENTS</a></li>
+      <li><a href="apps.html" style="white-space: nowrap;">ART APPS</a></li>
+    </ul>
+  </section>
+</nav>
 
+<main id="panel">
 
-    <div class="row">
-      <div class="large-12 columns">
+<div class="row">
+  <div class="large-12 columns">
 
-        <div class="large-3 columns">
-          <br />
-          <a href="index.html"><img src="img/+art_app_2X.png" border="0" /></a>
-        </div>
-        <div class="large-9 columns" style="text-align:right; margin-top:2em;">
-          <div class="row">
-                <a href="index.html">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp;
-              <span style="white-space: nowrap; color:#bbb">THE PETITION</span> &nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="about.html">ABOUT</a> &nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="statements.html">STATEMENTS</a> &nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="apps.html" style="white-space: nowrap;">ART APPS</a> &nbsp;&nbsp;&nbsp;&nbsp;
-          <!--
-          <a href="">NEWS</a> &nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="">CONTACT</a> &nbsp;&nbsp;&nbsp;&nbsp;
-        -->
+    <br />
+    <a href="index.html"><img src="img/+art_app_2X.png" border="0" width="30%" height="30%" /></a>
+
+        <div id="bignav">
+          <a href="index.html">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp;
+          <span style="white-space: nowrap; color:#bbb">THE PETITION</span> &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="about.html">ABOUT</a> &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="statements.html">STATEMENTS</a> &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="apps.html" style="white-space: nowrap;">ART APPS</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        
           <span class="soc2">
               <p><a class="soc2-twitter" href="https://twitter.com/addingart" target="_blank"></a></p>
               <p><a class="soc2-facebook" href="https://www.facebook.com/addingart" target="_blank"></a></p>
           </span>
-           </div>
         </div>
-      </div>
+        <div id="smallnav">
+            <span class="soc2">
+              <p><a class="soc2-twitter" href="https://twitter.com/addingart" target="_blank"></a></p>
+              <p><a class="soc2-facebook" href="https://www.facebook.com/addingart" target="_blank"></a></p>
+            </span>
+            <button class="toggle-button">☰</button>
+        </div>
+
     </div>
+</div>
+
 <p></p>
 
 <div style="background: #000 url('img/main_header_graphic_2X.jpg') no-repeat; background-size:100% auto;">
@@ -436,6 +461,7 @@
       </div>
     </div>
     
+    </main>
     
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
@@ -459,7 +485,42 @@
     </script>
 
 
+    <script src="js/slideout.min.js"></script>
+    
+    <script>
+          
+      $(document).ready(function() {
 
+
+        if($(window).width()>768){
+            $('#bignav').show();
+            $('#menu').hide();
+            $('#smallnav').hide();
+
+        }
+        else{
+            $('#bignav').hide();
+            $('#menu').show();
+            $('#smallnav').show();
+
+            var slideout = new Slideout({
+              'panel': document.getElementById('panel'),
+              'menu': document.getElementById('menu'),
+              'padding': 256,
+              'side': 'right',
+              'tolerance': 70
+            });
+
+            // Toggle button
+            document.querySelector('.toggle-button').addEventListener('click', function() {
+              slideout.toggle();
+            });
+        }
+
+        });
+
+
+    </script>
 
 
   </body>
