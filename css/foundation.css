@@ -6554,6 +6554,11 @@ th.hide-for-touch {
   border: 0;
 }
 
+.toggle-button:hover, .toggle-button:focus {
+  color: #000;
+  background-color: #fff;
+}
+
 
 body {
   width: 100%;
